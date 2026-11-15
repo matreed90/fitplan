@@ -2,7 +2,7 @@
 
 A web app you can install on your phone. It builds a two-week training plan that mixes strength and cardio, runs your workouts with timers, and tracks your progress. There is no server and no sign-in: all data stays on the device.
 
-**Live:** https://amitzvik.github.io/fitplan/
+**Live:** https://matreed90.github.io/fitplan/
 
 ## Features
 
