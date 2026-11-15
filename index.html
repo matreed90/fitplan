@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Only the app's own script files may run (blocks injected scripts); the only external content is the YouTube player. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>FitPlan – Workout Planner</title>
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app"></main>
+
+  <div id="timer" hidden>
+    <div class="timer-bar"><i id="timer-bar"></i></div>
+    <div class="timer-row">
+      <div><small id="timer-label"></small><b id="timer-time">0:00</b></div>
+      <div class="row"><button class="btn small" data-action="timer-add">+15s</button><button class="btn small primary" data-action="timer-skip">Skip</button></div>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a href="#today"><span>🏠</span>Today</a>
+    <a href="#plan"><span>📋</span>Plan</a>
+    <a href="#progress"><span>📈</span>Progress</a>
+    <a href="#body"><span>⚖️</span>Body</a>
+    <a href="#settings"><span>⚙️</span>Settings</a>
+  </nav>
+
+  <div id="modal" hidden><div class="modal-card" id="modal-body"></div></div>
+  <div id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
